@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy for production') {
             
             steps {
-                sh 'npm start'
+                sh './deploy.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 
             }
