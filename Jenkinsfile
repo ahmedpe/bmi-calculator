@@ -19,6 +19,7 @@ pipeline {
         stage('Deploy for production') {
             
             steps {
+                 sh 'sudo chmod +x ./deploy.sh'
                 sh './deploy.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 
